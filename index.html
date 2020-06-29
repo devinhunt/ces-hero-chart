@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Hero Candidate v1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero-container {
+        width: 90vw;
+        height: 90vh;
+        margin: 5vh 5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hero" class="hero-container"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="index.js"></script>
+    <script>
+      const heroMap = window.CESHero(document.getElementById('hero'))
+    </script>
+  </body>
+</html>

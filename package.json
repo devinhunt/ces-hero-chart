@@ -1,0 +1,20 @@
+{
+  "name": "hero-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "parcel serve index.html",
+    "build": "parcel build index.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
+}
