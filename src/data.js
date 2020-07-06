@@ -6,7 +6,7 @@ export const scoreToTrendMap = {
   'Green': 'Trending better',
 }
 
-export const sheetsCsvTemplate = docId => `https://docs.google.com/spreadsheets/d/${docId}/export?format=csv`
+export const sheetsCsvTemplate = docId => `https://docs.google.com/spreadsheets/d/${docId}/pub?output=csv`
 
 export const groupTrend = (data, prefix, startingIndex = 0, minIntegerDigits = 1, reverse = true) => {
   let index = startingIndex

@@ -26,7 +26,7 @@ window.CESHero = async (hostElement) => {
 
   // load data
   const usmap = await d3.json('https://unpkg.com/us-atlas@1/us/10m.json')
-  const data = await d3.csv(sheetsCsvTemplate(SHEET_ID))
+  const data = await d3.csv('https://ces-data.herokuapp.com/data')
 
   data.forEach( datum => {
     datum['TREND_CASES'] = groupTrend(datum, 'CASES-T-').map(p => +p)
@@ -38,7 +38,7 @@ window.CESHero = async (hostElement) => {
 
     datum['TREND_POSITIVITY'] = groupTrend(datum, 'POSITIVITY-', 0, 2).map(p => {
       const num = p.substring(0, p.length - 1)
-      return +num
+      return +num / 100
     })
 
   })
@@ -55,9 +55,9 @@ window.CESHero = async (hostElement) => {
     .on('mouseleave', onStateLeave)
   
   // sparks
-  const sparkMetrics = { width: 140, height: 50, top: 20, right: 15, bottom: 5, left: 15 }
-  const covidSpark = new Spark(sparkMetrics)
-  const positivitySpark = new Spark(sparkMetrics, 2, '%')
+  const sparkMetrics = { width: 160, height: 50, top: 20, right: 30, bottom: 5, left: 30 }
+  const covidSpark = new Spark(sparkMetrics, '.3~s')
+  const positivitySpark = new Spark(sparkMetrics, '.1%')
 
 
   function onStateClick(d) {

@@ -1,9 +1,8 @@
 export default class Spark {
 
-  constructor(metrics, percision = 0, suffix = '') {
+  constructor(metrics, labelFormat = '') {
     this.metrics = metrics
-    this.percision = percision
-    this.suffix = suffix
+    this.labelFormat = labelFormat
     this.initialize()
   }
 
@@ -24,8 +23,8 @@ export default class Spark {
       .classed('ces-trend-spark-label', true)
       .text('0')
       .attr('fill', 'white')
-      .attr('text-anchor', 'middle')
-      .attr('y', -5)
+      .attr('text-anchor', 'end')
+      .attr('y', 3)
 
     this.rightLabel = this.svg.append('g')
     
@@ -33,8 +32,8 @@ export default class Spark {
       .classed('ces-trend-spark-label', true)
       .text('0')
       .attr('fill', 'white')
-      .attr('text-anchor', 'middle')
-      .attr('y', -5)
+      .attr('text-anchor', 'start')
+      .attr('y', 3)
   }
 
   get node() {
@@ -58,15 +57,15 @@ export default class Spark {
       .datum(data)
       .attr('d', line)
 
-    this.leftLabel.attr('transform', `translate(${x(0)}, ${y(data[0])})`)
+    this.leftLabel.attr('transform', `translate(${x(0) - 3}, ${y(data[0])})`)
     this.leftLabel.select('text').text(this.formatDatum(data[0]))
 
-    this.rightLabel.attr('transform', `translate(${x(data.length - 1)}, ${y(data[data.length - 1])})`)
+    this.rightLabel.attr('transform', `translate(${x(data.length - 1) + 3}, ${y(data[data.length - 1])})`)
     this.rightLabel.select('text').text(this.formatDatum(data[data.length - 1]))
   }
 
   formatDatum(datum) {
-    return `${datum}${this.suffix}`
+    return d3.format(this.labelFormat)(datum)
   }
 
 }

@@ -45,7 +45,7 @@ export const heroStyle = `
 .Red-bg { background-color: ${RED}; }
 
 .ces-tooltip-content {
-  width: 320px;
+  width: 360px;
   border-radius: 4px;
   color: white;
   padding: 8px 10px;
@@ -78,6 +78,6 @@ export const heroStyle = `
 }
 
 .ces-trend-spark-label {
-  font-size: 8px;
+  font-size: 10px;
 }
 `
