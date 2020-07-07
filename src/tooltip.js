@@ -25,7 +25,7 @@ export const tooltipTemplate = context => {
       </div>
       <div class="ces-grid">
         <div class="ces-col">
-          <span class="ces-trend-label">Last 14 days covid+</span>
+          <span class="ces-trend-label">Last 14 days COVID+</span>
           <div id="ces-spark-covid-plus"></div>          
         </div>
         <div class="ces-col">
