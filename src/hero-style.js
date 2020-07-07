@@ -4,9 +4,9 @@ export const injectStyle = styleString => {
   document.head.append(styleEl)
 }
 
-export const RED = `#EB5757`
-export const YELLOW = `#FEB709`
-export const GREEN = `#219653`
+export const RED = `#BD3427`
+export const YELLOW = `#FAC441`
+export const GREEN = `#236552`
 
 export const heroStyle = `
 
