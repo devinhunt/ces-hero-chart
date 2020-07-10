@@ -1,5 +1,5 @@
 import { idToStateData } from './data'
-import { GREEN, YELLOW, RED } from './hero-style'
+import { GREEN, YELLOW, RED, DEEP_RED } from './hero-style'
 
 export default class Map {
 
@@ -7,6 +7,7 @@ export default class Map {
   HEIGHT = 700
 
   SCORE_TO_COLOR = {
+    'Bruised Red': DEEP_RED,
     'Red': RED,
     'Yellow': YELLOW,
     'Green': GREEN,
@@ -26,7 +27,7 @@ export default class Map {
   initialize() {
     const idToTrendColor = id => {
       const state = idToStateData(id, this.cesData)
-      return this.SCORE_TO_COLOR[state['GATING SCORE COLOR']]
+      return this.SCORE_TO_COLOR[state['NEW GATING SCORE']]
     }
 
     this.svg = d3.create('svg')

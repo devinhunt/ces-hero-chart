@@ -1,9 +1,17 @@
 import { fips } from './fips'
 
 export const scoreToTrendMap = {
+  'Bruised Red': 'Uncontrolled spread',
   'Red': 'Trending poorly',
   'Yellow': 'Making progress',
   'Green': 'Trending better',
+}
+
+export const scoreToSafeString = {
+  'Bruised Red': 'Bruised-Red',
+  'Red': 'Red',
+  'Yellow': 'Yellow',
+  'Green': 'Green',
 }
 
 export const sheetsCsvTemplate = docId => `https://docs.google.com/spreadsheets/d/${docId}/pub?output=csv`

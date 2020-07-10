@@ -4,9 +4,12 @@ export const injectStyle = styleString => {
   document.head.append(styleEl)
 }
 
-export const RED = `#BD3427`
-export const YELLOW = `#FAC441`
-export const GREEN = `#236552`
+
+
+export const DEEP_RED = `#90112E`
+export const RED = `#DA3C2E`
+export const YELLOW = `#FCE04F`
+export const GREEN = `#46AD5A`
 
 export const heroStyle = `
 
@@ -39,10 +42,12 @@ export const heroStyle = `
 .Green { color: ${GREEN}; }
 .Yellow { color: ${YELLOW}; }
 .Red { color: ${RED}; }
+.Bruised-Red { color: ${DEEP_RED}; }
 
 .Green-bg { background-color: ${GREEN}; }
 .Yellow-bg { background-color: ${YELLOW}; }
 .Red-bg { background-color: ${RED}; }
+.Bruised-Red-bg { background-color: ${DEEP_RED}; }
 
 .ces-tooltip-content {
   width: 360px;
@@ -51,6 +56,10 @@ export const heroStyle = `
   padding: 8px 10px;
   box-sizing: border-box;
   border: 2px solid #eee;
+}
+
+.ces-tooltip-content.Yellow-bg {
+  color: #222;
 }
 
 .ces-hero-tooltip h1 {
@@ -79,5 +88,21 @@ export const heroStyle = `
 
 .ces-trend-spark-label {
   font-size: 10px;
+}
+
+.Green-bg .ces-spark-line, .Red-bg .ces-spark-line, .Bruised-Red-bg .ces-spark-line {
+  stroke: white;
+}
+
+.Green-bg .ces-trend-spark-label, .Red-bg .ces-trend-spark-label, .Bruised-Red-bg .ces-trend-spark-label {
+  fill: white;
+}
+
+.Yellow-bg .ces-spark-line {
+  stroke: black;
+}
+
+.Yellow-bg .ces-trend-spark-label {
+  fill: black;
 }
 `

@@ -14,7 +14,6 @@ export default class Spark {
     this.path = this.svg.append('path')
       .classed('ces-spark-line', true)
       .attr('fill', 'none')
-      .attr('stroke', 'white')
       .attr('stroke-width', 1.5)
 
     this.leftLabel = this.svg.append('g')
@@ -22,7 +21,6 @@ export default class Spark {
     this.leftLabel.append('text')
       .classed('ces-trend-spark-label', true)
       .text('0')
-      .attr('fill', 'white')
       .attr('text-anchor', 'end')
       .attr('y', 3)
 
@@ -31,7 +29,6 @@ export default class Spark {
     this.rightLabel.append('text')
       .classed('ces-trend-spark-label', true)
       .text('0')
-      .attr('fill', 'white')
       .attr('text-anchor', 'start')
       .attr('y', 3)
   }
