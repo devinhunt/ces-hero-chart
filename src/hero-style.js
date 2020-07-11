@@ -6,10 +6,10 @@ export const injectStyle = styleString => {
 
 
 
-export const DEEP_RED = `#90112E`
-export const RED = `#DA3C2E`
-export const YELLOW = `#FCE04F`
-export const GREEN = `#46AD5A`
+export const DEEP_RED = `#882230`
+export const RED = `#BD3427`
+export const YELLOW = `#FAC441`
+export const GREEN = `#236552`
 
 export const heroStyle = `
 
