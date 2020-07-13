@@ -3,7 +3,7 @@ import { fips } from './fips'
 export const scoreToTrendMap = {
   'Bruised Red': 'Uncontrolled spread',
   'Red': 'Trending poorly',
-  'Yellow': 'Making progress',
+  'Yellow': 'Caution Warranted',
   'Green': 'Trending better',
 }
 
