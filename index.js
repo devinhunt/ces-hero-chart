@@ -26,7 +26,8 @@ window.CESHero = async (hostElement) => {
 
   // load data
   const usmap = await d3.json('https://unpkg.com/us-atlas@1/us/10m.json')
-  const data = await d3.csv('https://ces-data.herokuapp.com/data')
+  const data = await d3.csv('https://ces-data.herokuapp.com/data/default')
+
 
   data.forEach( datum => {
     datum['TREND_CASES'] = groupTrend(datum, 'CASES-T-').map(p => +p)

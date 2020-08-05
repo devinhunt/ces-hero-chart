@@ -32,7 +32,7 @@ export default class Map {
 
     this.svg = d3.create('svg')
       .attr('viewBox', [0, 0, this.WIDTH, this.HEIGHT])
-      .attr('preserveAspectRation', 'xMidYMid meet')
+      .attr('preserveAspectRatio', 'xMidYMid meet')
 
     this.mapG = this.svg.append('g')
 
